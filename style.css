@@ -4,14 +4,13 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
 }
 
 body {
     font-family: 'Jura', sans-serif;
-    /* background-color: #DAF2D1; */
     height: 100%;
 }
-
 
 .menu {
     background-image: linear-gradient(to right, #777ADD, #3D91F5);
@@ -101,12 +100,22 @@ div > div > a {
     height: 40px;
 }
 
+.btn-atividade {
+    width: 120px;
+    height: 40px;
+}
+
 .explain-content {
     padding: 2rem;
     font-size: 1rem;
 }
 
 .explain-content > div {
+    border: solid #777ADD;
+    padding: 0;
+}
+
+.intro-content > div {
     border: solid #777ADD;
     padding: 0;
 }
