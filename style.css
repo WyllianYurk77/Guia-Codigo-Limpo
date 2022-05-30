@@ -1,14 +1,33 @@
 @import url('https://fonts.googleapis.com/css2?family=Jura:wght@400;600;700&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
     font-family: 'Jura', sans-serif;
-    background-color: #DAF2D1;
+    /* background-color: #DAF2D1; */
+    height: 100%;
+}
+
+
+.menu {
+    background-image: linear-gradient(to right, #777ADD, #3D91F5);
+    height: 30px;
+    width: 100%;
+}
+
+.menu > a {
+    padding: 0 2rem;
+    vertical-align: middle;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    height: 100%;
+    width: 50px;
 }
 
 .titulo {
@@ -19,11 +38,24 @@ body{
 }
 
 .sub-titulo {
-    margin-left: 1rem;
+    margin-left: 2rem;
+}
+
+.sub-titulo-2 {
+    text-align: center;
 }
 
 p {
     padding: 1rem 2rem;
+}
+
+.intro {
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+.intro-content {
+    padding: 2rem;
 }
 
 .btn-container {
@@ -34,18 +66,30 @@ p {
 }
 
 button {
-    background-color: #56CA61;
+    background-image: linear-gradient(to right, #777ADD, #3D91F5);
     width: 200px;
     height: 90px;
     color: white;
     font-family: 'Jura';
     font-weight: 600;
     font-size: 1rem;
+    border-radius: 15px;
 }
 
-a {
+button:hover {
+    cursor: pointer;
+}
+
+div > div > a {
     text-decoration: none;
-    padding: 1rem 4rem;
+    /* padding: 1rem 4rem; */
+    margin: 4rem;
+}
+
+.git-alunos {
+    text-decoration: none;
+    padding: 0;
+    color: purple;
 }
 
 .top-btn {
@@ -56,3 +100,49 @@ a {
     width: 80px;
     height: 40px;
 }
+
+.explain-content {
+    padding: 2rem;
+    font-size: 1rem;
+}
+
+.explain-content > div {
+    border: solid #777ADD;
+    padding: 0;
+}
+
+ul {
+    margin-left: 5rem;
+}
+
+.exemplo-codigo {
+    text-align: center;
+    /* padding: 2rem; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer {
+    background-image: linear-gradient(to right, #777ADD, #3D91F5);
+    text-align: center;
+    color: white;
+    height: 25px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.livro {
+    height: 200px;
+    width: 140px;
+    margin-top: 20px;
+}
+
+pre {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
