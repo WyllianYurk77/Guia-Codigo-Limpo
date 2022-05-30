@@ -6,18 +6,89 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Números mágicos</title>
     <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../prism/prism.css">
+    <link rel="shortcut icon" href="../assets/favicon-32x32.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/3f8996b2ae.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <h1 class="titulo">Material sobre Números mágicos</h1>
+    <div class="menu">
+        <a href="../index.html"><em class="fa-solid fa-house"></em></a>
+    </div>
+    <h1 class="titulo">Números mágicos</h1>
     <br>
-    <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. <br>
-        Asperiores voluptatum labore exercitationem sapiente voluptas neque error nam, ad repudiandae distinctio maiores cum inventore sit non velit! <br>
-        Iure placeat itaque esse.
-    </p>
+    <div class="explain-content">
+        <div>
+            <p>
+                Números mágicos são aqueles números aleatórios que de vez em quando
+                você acaba encontrando no código, eles são “mágicos” porque se assemelham
+                com o truque de um mágico, sendo necessário uma explicação para que sejam entendidos.
+            </p>
+        </div>
+    </div>
+    <div class="exemplo-codigo">
+        <pre id="highlighting" aria-hidden="true">
+            <code class="language-java" id="highlighting-content">
+                // método que recebe dois números e soma-os
+                metodoDeSoma(int numero1, int numero2) {
+                    soma = numero1 + 2;
+                    return soma;
+                }
+            </code>
+        </pre>
+    </div>
+    <div class="explain-content">
+        <div>
+            <p>
+                De onde veio o número <strong>2</strong>? Qual seu significado? Pois é… <br>
+                Imagina ter números assim espalhados por códigos gigantes em um sistema.
+                E, por incrível que pareça, acontece com frequência. <br>
+                Ter estes números no seu código abre portas para bugs e problemas mais sérios na aplicação, por exemplo: <br>
+            </p>
+            <ul>
+                <li>Dificultar a leitura do código</li>
+                <li>Prejudicar a manutenção do código</li>
+            </ul>
+            
+            <p>
+                Para evitar os números mágicos, sempre que possível utilize <strong>constantes</strong> para representar esses valores. <br>
+                As constantes são variáveis com o propósito principal de dar significado a 
+                um valor que pode sofrer modificações.
+            </p>
+        </div>
+    </div>
+    <div class="exemplo-codigo">
+        <pre id="highlighting" aria-hidden="true">
+            <code class="language-java" id="highlighting-content">
+                // método que recebe dois números e soma-os com 
+                // o ano em que estamos
+                int ANO_ATUAL = 2022;
+                metodoDeSoma(int numero1, int numero2) {
+                    soma = numero1 + numero2 + ANO_ATUAL;
+                    return soma;
+                }
+            </code>
+        </pre>
+    </div>
+    
     <br><br>
+    
     <div class="btn-container">
         <a href="../index.html"><button class="btn-voltar">Voltar</button></a>
     </div>
+
+    <script src="../prism/prism.js"></script>
 </body>
+
+<script>
+
+    function update(text) {
+        let result_element = document.querySelector("#highlighting-content");
+        // Update code
+        result_element.innerText = text;
+        // Syntax Highlight
+        Prism.highlightElement(result_element);
+        
+    }
+
+</script>
 </html>
