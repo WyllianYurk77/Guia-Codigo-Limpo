@@ -4,7 +4,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    
 }
 
 body {
@@ -107,7 +106,7 @@ div > div > a {
 
 .explain-content {
     padding: 2rem;
-    font-size: 1rem;
+    font-size: 1.2rem;
 }
 
 .explain-content > div {
@@ -126,7 +125,7 @@ ul {
 
 .exemplo-codigo {
     text-align: center;
-    /* padding: 2rem; */
+    padding: 2rem;
     display: flex;
     align-items: center;
     justify-content: center;
