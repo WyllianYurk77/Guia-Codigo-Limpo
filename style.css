@@ -154,3 +154,11 @@ pre {
     justify-content: center;
 }
 
+#no-identation {
+    white-space: pre-line;
+}
+
+.exemplo-no-identation {
+    width: 735.38px;
+}
+
