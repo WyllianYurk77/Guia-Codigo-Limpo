@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formatação</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../prism/prism.css">
+    <link rel="shortcut icon" href="../assets/favicon-32x32.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/3f8996b2ae.js" crossorigin="anonymous"></script>
+    <script src="../prism/prism.js"></script>
+</head>
+<body>
+    <div class="menu">
+        <a href="home.html"><em class="fa-solid fa-house"></em></a>
+    </div>
+    <h1 class="titulo">Dicas de formatação e extras</h1>
+    <br>
+    <div class="explain-content">
+        <div>
+            <p>
+                Quase todo o código é lido da esquerda para a direita e de cima para baixo.
+                Cada linha representa uma expressão ou cláusula, e cada grupo de linhas 
+                representa um pensamento completo. E para facilitar a leitura, esses pensamentos 
+                devem ser separados por linhas em branco (<em>pular linha</em>). <br><br>
+
+                Não deixe o código se estender demais em uma linha só, procure seguir o tamanha do 
+                ambiente de desenvolvimento (IDE) que está utilizando para saber até onde ir. 
+                <strong>Não ultrapasse a margem!</strong>
+                <br><br>
+
+                <strong>Indentação</strong> <br>
+                O código-fonte possui hierarquias, os níveis podem ser definidos por:
+            </p>
+            <ul>
+                <li>Classes</li>
+                <li>Métodos/Funções</li>
+                <li>Blocos de códgigo</li>
+            </ul>
+            <p>
+                Mas esses níveis não são facilmente identificados em um código com texto escrito no mesmo 
+                alinhamento. Para solucionar isso utiliza-se um recurso chamado <strong>Indentação</strong>, que nada mais é 
+                do que o afastamento do texto da sua margem, possibilitando a visualização dos níveis citados. <br>
+                Sem indentação códigos tornam-se ilegíveis para humanos. <br><br>
+                Observe a diferença de um código sem nenhuma formatação de um formatado corretamente:
+            </p>
+        </div>
+    </div>
+    <div class="exemplo-codigo">
+        <pre id="highlighting" aria-hidden="true" class="exemplo-no-identation">
+            <code class="language-java" id="no-identation">
+                // sem separação de linhas e sem indentação
+                public class Pessoa {
+                    private String nome;
+                    private int idade;
+                    private String cpf;
+                    public Pessoa(String nome, int idade, String cpf) {
+                        this.nome = nome;
+                        this.idade = idade;
+                        this.cpf = cpf;
+                    }
+                    public String mostrarFasesPessoa(Pessoa pessoa) {
+                        if(pessoa.getIdade() &lt;= 13) {
+                            return pessoa.getNome() + " é criança.";
+                        }
+                        else if(pessoa.getIdade() &lt; 18) {
+                            return pessoa.getNome() + " é adolescente.";
+                        }
+                        else if(pessoa.getIdade() &lt; 60) {
+                            return pessoa.getNome() + " é adulto.";
+                        }
+                        pessoa.getNome() + " é idoso.";
+                    }
+                }
+            </code>
+        </pre>
+    </div>
+    <div class="exemplo-codigo">
+        <pre id="highlighting" aria-hidden="true">
+            <code class="language-java" id="highlighting-content">
+                // formatado corretamente
+                public class Pessoa {
+                    private String nome;
+                    private int idade;
+                    private String cpf;
+
+                    public Pessoa(String nome, int idade, String cpf) {
+                        this.nome = nome;
+                        this.idade = idade;
+                        this.cpf = cpf;
+                    }
+
+                    public String mostrarFasesPessoa(Pessoa pessoa) {
+                        if(pessoa.getIdade() &lt;= 13) {
+                            return pessoa.getNome() + " é criança.";
+                        }
+                        else if(pessoa.getIdade() &lt; 18) {
+                            return pessoa.getNome() + " é adolescente.";
+                        }
+                        else if(pessoa.getIdade() &lt; 60) {
+                            return pessoa.getNome() + " é adulto.";
+                        }
+                        
+                        pessoa.getNome() + " é idoso.";
+                    }
+                }
+            </code>
+        </pre>
+    </div>
+
+    <h2 class="sub-titulo">Comentários</h2>
+
+    <div class="explain-content">
+        <div>
+            <p>
+                Não existe nada mais útil do que um bom comentário. Porém, não existe nada pior 
+                do que um comentário ruim, redundante e desnecessário. <br><br>
+                Os comentários servem para quando não conseguimos expressar algo somente com 
+                os nomes presentes no código. <br><br>
+                Claro que você pode fazer comentários nos seus projetos pessoais, mas o recomendável é 
+                não termos que encher os códigos de comentários.
+            </p>
+        </div>
+    </div>
+    <div class="exemplo-codigo">
+        <pre id="highlighting" aria-hidden="true">
+            <code class="language-java" id="highlighting-content">
+                // verifica se o funcionario pode receber benefícios
+                if(funcionario.getTempoTrabalho &gt; 20 && funcionario.getIdade() &gt; 65) {
+
+                }
+            </code>
+        </pre>
+    </div>
+    <div class="explain-content">
+        <div>
+            <p>
+                Agora vamos ver como esse código poderia ficar para que não houvesse a necessidade
+                de ter comentários acima dele.
+            </p>
+        </div>
+    </div>
+    <div class="exemplo-codigo">
+        <pre id="highlighting" aria-hidden="true">
+            <code class="language-java" id="highlighting-content">
+                if(funcionario.podeReceberBeneficios()) {
+
+                }
+            </code>
+        </pre>
+    </div>
+    <div class="explain-content">
+        <div>
+            <p>
+                No segundo trecho de código o método foi adaptado para que ficasse mais clara a sua função 
+                e não precisasse ter um comentário explicando o que ele faz. <br><br>
+                Vamos ver mais alguns exemplos de comentários desnecessários:
+            </p>
+        </div>
+    </div>
+    <div class="exemplo-codigo">
+        <pre id="highlighting" aria-hidden="true">
+            <code class="language-java" id="highlighting-content">
+                /* Nome da pessoa */
+                private String nome;
+
+                /* Dia do mês */
+                private int diaDoMes;
+
+                /* Construtor padrão */
+                public Pessoa() {
+                }
+
+                /* Retorna a idade */
+                public int getIdade() {
+                    return this.idade;
+                }
+            </code>
+        </pre>
+    </div>
+    <div class="explain-content">
+        <div>
+            <p>
+                Além dos comentários explicativos têm também os códigos que não são mais usados 
+                e são comentados para não interfirirem na execução do programa. Se ver que um 
+                código está comentado e não vai ser usado, apague-o sem pena!
+            </p>
+        </div>
+    </div>
+
+    <h2 class="sub-titulo">Mais algumas dicas</h2>
+
+    <div class="explain-content">
+        <div>
+            <p>
+                <ul>
+                    <li>Use nomes pronunciáveis</li>
+                    <li>Não use abreviações ou códigos em nomes</li>
+                    <li>Não faça trocadilhos em métodos ou variáveis</li>
+                    <li>Evite repetição de código</li>
+                </ul>
+            </p>
+            <p>
+                Por último, uma regrinha que é mostrada no livro Código Limpo que todo programador deveria 
+                seguir: <br><br>
+
+                <strong>Regra do escoteiro</strong> <br>
+                "Deixe sempre o acampamento mais limpo do que você encontrou!" <br>
+                O mesmo vale para nosso código. 
+                Devolva sempre o código melhor do que você o obteve. Se todo desenvolvedor no time tiver esta visão, 
+                e devolver um pedacinho de código melhor do que estava antes, em pouco temos teremos uma grande mudança. <br><br>
+                <strong>
+                    Se gostou das dicas e quiser se aprofundar mais nas boas práticas de programação, recomendamos ler o
+                    livro que serviu de base para este guia.
+                </strong>
+            </p>
+        </div>
+    </div>
+    
+    <h2 class="sub-titulo-2"><strong>Que tal praticar para fixar melhor o entendimento?!</strong></h2>
+
+    <div class="btn-container">
+        <a href="home.html"><button class="btn-atividade">Atividades</button></a>
+    </div>
+
+    <br><br>
+
+    <div class="btn-container">
+        <a href="home.html"><button class="btn-voltar">Voltar</button></a>
+    </div>
+</body>
+<footer>
+    Direitos reservados a Samuel Almeida Barros de Melo &#169; e Wyllian de Asevedo Mendes &#169;
+</footer>
+</html>
