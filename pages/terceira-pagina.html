@@ -6,21 +6,185 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Métodos</title>
     <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../prism/prism.css">
     <link rel="shortcut icon" href="../assets/favicon-32x32.png" type="image/x-icon">
     <script src="https://kit.fontawesome.com/3f8996b2ae.js" crossorigin="anonymous"></script>
+    <script src="../prism/prism.js"></script>
 </head>
 <body>
     <div class="menu">
         <a href="home.html"><em class="fa-solid fa-house"></em></a>
     </div>
-    <h1 class="titulo">Material sobre Métodos</h1>
+    <h1 class="titulo">Métodos ou Funções</h1>
     <br>
-    <p>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. <br>
-        Blanditiis eos in dolores voluptas maxime? Tempore ut possimus, reiciendis explicabo vel quo dolor debitis quas. <br>
-        Magni autem ullam culpa cum voluptatem?
-    </p>
+    <div class="explain-content">
+        <div>
+            <p>
+                Assim como as <a href="segunda-pagina.html" class="git-alunos"><strong>variáveis</strong></a>, os métodos ou funções devem seguir 
+                um padrão de nomenclatura e devem descrever de forma clara o que fazem no código. <br>
+                É recomendável que os nomes dos métodos sejam verbos, para que representem <strong>ações</strong>.
+                <br><br>
+                Abaixo temos um exemplo de método simples em um código Java:
+            </p>
+        </div>
+    </div>
+    <div class="exemplo-codigo">
+        <pre id="highlighting" aria-hidden="true">
+            <code class="language-java" id="highlighting-content">
+                public int somar(int numeroUm, int numeroDois) {
+                    return numeroUm + numeroDois;
+                }
+            </code>
+        </pre>
+    </div>
+    <div class="explain-content">
+        <div>
+            <p>
+                Não se apresse ao escolher o nome um nome para seus métodos. 
+                Certifique-se de que ele seja descritivo e revele sua função ao lê-lo. <br><br>
+                É provável que nomes grandes em códigos passem uma má impressão a primeira vista, 
+                mas os nomes nos códigos são 90% responsáveis pela legibilidade do software. <br><br>
+                É preciso escolher sabiamente seus nomes para manter os métodos claros e relevantes. 
+                <strong>Nomes são muito importantes para serem tratados de qualquer jeito!</strong>
+                <br><br>
+                Vejamos mais alguns exemplos.
+            </p>
+        </div>
+    </div>
+    <div class="exemplo-codigo">
+        <pre id="highlighting" aria-hidden="true">
+            <code class="language-java" id="highlighting-content">
+                public String x(List&lt;double&gt; y) {
+                    double q = 0.0;
+
+                    for(int kk = 0; kk &lt; 3; kk++) {
+                        q = q + y.get(kk);
+                    }
+
+                    q = q / 3;
+
+                    if(q &gt;= 7.0) {
+                        return "Aprovado";
+                    }
+                    
+                    return "Reprovado";
+                }
+            </code>
+        </pre>
+    </div>
+    <div class="explain-content">
+        <div>
+            <p>
+                Observe o código acima, você consegue entender sem dificuldade o que ele faz? <br>
+                Eu tenho certeza que a resposta é <strong>NÃO</strong>. Mesmo que você não saiba ou nunca tenha visto 
+                essa sintaxe, ela não é o motivo de você ter dificuldade de entender o que o método faz. 
+                Da forma que ele está é apenas um emaranhando de símbolos e números mágicos. <br><br>
+                Vamos ver esse mesmo método escrito utilizando as boas práticas para um código limpo.
+            </p>
+        </div>
+    </div>
+    <div class="exemplo-codigo">
+        <pre id="highlighting" aria-hidden="true">
+            <code class="language-java" id="highlighting-content">
+                public String mostrarResultadoFinalDoAluno(List&lt;double&gt; notas) {
+                    double media = 0.0;
+
+                    for(int contador = 0; contador &lt; notas.size(); contador++) {
+                        media = media + notas.get(contador);
+                    }
+
+                    media = media / notas.size();
+
+                    if(media &gt;= 7.0) {
+                        return "Aprovado";
+                    }
+
+                    return "Reprovado";
+                }
+            </code>
+        </pre>
+    </div>
+    <div class="explain-content">
+        <div>
+            <p>
+                Analisando o método agora podemos perceber a diferença que os nomes fazem, não acha? <br>
+                Apesar de parecer complexo, basicamente o que ele está fazendo é exatamente o que está dizendo 
+                no seu nome "<strong>mostrar o resultado final do aluno</strong>", onde é um método que recebe as 
+                notas de um aluno, soma essas notas uma por uma, com a soma armazenada na variável "<strong>media</strong>", é 
+                calculada a média das notas (soma das notas dividida pelo número total de notas). <br>
+                Após isso, a função condicional verifica se essa média é maior que 7, em caso verdadeiro é retornado que o 
+                aluno foi aprovado, caso contrário ele não entra na verificação e retorna diretamente que o 
+                aluno foi reprovado.
+            </p>
+        </div>
+    </div>
+    <div class="explain-content">
+        <div>
+            <p>
+                Uma outra orientação é: <strong>Métodos/funções devem fazer uma coisa só!</strong> <br><br>
+                Costuma ser tentador criar métodos que tenham várias funcionalidades dentro deles, mas isso 
+                não é o recomendado, porque além de deixar o método extenso, dificulta sua manutenção se for 
+                preciso refatorá-lo. <br>
+                Uma alternativa para essa situação é, se você precisar fazer mais de uma operação, divida a função 
+                criando outro método, e caso ainda precise, chame-o dentro do método principal.
+            </p>
+        </div>
+    </div>
+    <div class="exemplo-codigo">
+        <pre id="highlighting" aria-hidden="true">
+            <code class="language-java" id="highlighting-content">
+                // método principal
+                public String gerarTituloEleitor(Pessoa pessoa) {
+
+                    if(!temIdadePermitida(pessoa.getIdade())) {
+                        return "Você ainda não tem idade para gerar o título de eleitor."
+                    }
+
+                    verificarDocumentos(pessoa.getDocumentos());
+
+                    // aqui fica o código que gera o título...
+
+                    return "Título gerado com sucesso.";
+                }
+
+                // primeiro método auxiliar
+                public boolean temIdadePermitida(int idade) {
+                    if(idade &gt;= 16) {
+                        return true;
+                    }
+
+                    return false;
+                }
+
+                // segundo método auxiliar
+                public boolean verificarDocumentos(List&lt;String&gt; documentos) {
+                    // código para verificar os documentos...
+                }
+            </code>
+        </pre>
+    </div>
+    <div class="explain-content">
+        <div>
+            <p>
+                Note que poderíamos ter no método principal tudo o que os métodos auxiliares estão fazendo, 
+                mas decidimos deixar no principal somente o que é descrito pelo seu nome, gerar o título. O 
+                tramento dos documentos, a verificação de idade e qualquer outra função para que o título 
+                possa ser gerado, pode ficar em um método separado. <br><br>
+                Isso ajuda a deixar o código organizado e mais fácil de entender. Além de que esses métodos 
+                auxiliares podem ser utilizados por outros métodos, não só o principal, o que reduz também 
+                a repetição de código.
+            </p>
+        </div>
+    </div>
+
+    <h2 class="sub-titulo-2"><strong>Que tal praticar para fixar melhor o entendimento?!</strong></h2>
+
+    <div class="btn-container">
+        <a href="home.html"><button class="btn-atividade">Atividades</button></a>
+    </div>
+
     <br><br>
+
     <div class="btn-container">
         <a href="home.html"><button class="btn-voltar">Voltar</button></a>
     </div>
