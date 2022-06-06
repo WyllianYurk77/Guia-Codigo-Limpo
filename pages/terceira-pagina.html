@@ -78,7 +78,7 @@
                 Observe o código acima, você consegue entender sem dificuldade o que ele faz? <br>
                 Eu tenho certeza que a resposta é <strong>NÃO</strong>. Mesmo que você não saiba ou nunca tenha visto 
                 essa sintaxe, ela não é o motivo de você ter dificuldade de entender o que o método faz. 
-                Da forma que ele está é apenas um emaranhando de símbolos e números mágicos. <br><br>
+                Da forma que ele está é apenas um emaranhando de símbolos e <a href="primeira-pagina.html" class="git-alunos">números mágicos</a>. <br><br>
                 Vamos ver esse mesmo método escrito utilizando as boas práticas para um código limpo.
             </p>
         </div>
@@ -136,15 +136,16 @@
                 // método principal
                 public String gerarTituloEleitor(Pessoa pessoa) {
 
-                    if(!temIdadePermitida(pessoa.getIdade())) {
-                        return "Você ainda não tem idade para gerar o título de eleitor."
+                    if(temIdadePermitida(pessoa.getIdade())) {
+
+                        verificarDocumentos(pessoa.getDocumentos());
+
+                        // aqui fica o código que gera o título...
+
+                        return "Título gerado com sucesso.";
                     }
-
-                    verificarDocumentos(pessoa.getDocumentos());
-
-                    // aqui fica o código que gera o título...
-
-                    return "Título gerado com sucesso.";
+                    
+                    return "Você ainda não tem idade para gerar o título de eleitor." 
                 }
 
                 // primeiro método auxiliar
