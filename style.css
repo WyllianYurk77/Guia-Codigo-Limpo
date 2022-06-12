@@ -129,6 +129,7 @@ ul {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
 }
 
 footer {
@@ -162,3 +163,7 @@ pre {
     width: 735.38px;
 }
 
+.fa-solid.fa-circle-question {
+    font-size: 5px;
+    
+}
