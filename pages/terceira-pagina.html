@@ -24,23 +24,24 @@
                 um padrão de nomenclatura e devem descrever de forma clara o que fazem no código. <br>
                 É recomendável que os nomes dos métodos sejam verbos, para que representem <strong>ações</strong>.
                 <br><br>
-                Abaixo temos um exemplo de método simples em um código Java:
+                No Trecho de código - 04 temos um exemplo de método simples em um código Java:
             </p>
         </div>
     </div>
     <div class="exemplo-codigo">
         <pre id="highlighting" aria-hidden="true">
             <code class="language-java" id="highlighting-content">
-                public int somar(int numeroUm, int numeroDois) {
-                    return numeroUm + numeroDois;
+                public int somar(int primeiroValor, int segundoValor) {
+                    return primeiroValor + segundoValor;
                 }
             </code>
         </pre>
+        <span>Trecho de Código - 04</span>
     </div>
     <div class="explain-content">
         <div>
             <p>
-                Não se apresse ao escolher o nome um nome para seus métodos. 
+                Não se apresse ao escolher um nome para seus métodos. 
                 Certifique-se de que ele seja descritivo e revele sua função ao lê-lo. <br><br>
                 É provável que nomes grandes em códigos passem uma má impressão a primeira vista, 
                 mas os nomes nos códigos são 90% responsáveis pela legibilidade do software. <br><br>
@@ -71,11 +72,12 @@
                 }
             </code>
         </pre>
+        <span>Trecho de Código - 05</span>
     </div>
     <div class="explain-content">
         <div>
             <p>
-                Observe o código acima, você consegue entender sem dificuldade o que ele faz? <br>
+                Observe o Trecho de Código - 05 acima, você consegue entender sem dificuldade o que ele faz? <br>
                 Eu tenho certeza que a resposta é <strong>NÃO</strong>. Mesmo que você não saiba ou nunca tenha visto 
                 essa sintaxe, ela não é o motivo de você ter dificuldade de entender o que o método faz. 
                 Da forma que ele está é apenas um emaranhando de símbolos e <a href="primeira-pagina.html" class="git-alunos">números mágicos</a>. <br><br>
@@ -103,6 +105,7 @@
                 }
             </code>
         </pre>
+        <span>Trecho de Código - 06</span>
     </div>
     <div class="explain-content">
         <div>
@@ -111,7 +114,7 @@
                 Apesar de parecer complexo, basicamente o que ele está fazendo é exatamente o que está dizendo 
                 no seu nome "<strong>mostrar o resultado final do aluno</strong>", onde é um método que recebe as 
                 notas de um aluno, soma essas notas uma por uma, com a soma armazenada na variável "<strong>media</strong>", é 
-                calculada a média das notas (soma das notas dividida pelo número total de notas). <br>
+                calculada a média das notas (soma das notas dividida pelo número total de notas). <br><br>
                 Após isso, a função condicional verifica se essa média é maior que 7, em caso verdadeiro é retornado que o 
                 aluno foi aprovado, caso contrário ele não entra na verificação e retorna diretamente que o 
                 aluno foi reprovado.
@@ -124,7 +127,7 @@
                 Uma outra orientação é: <strong>Métodos/funções devem fazer uma coisa só!</strong> <br><br>
                 Costuma ser tentador criar métodos que tenham várias funcionalidades dentro deles, mas isso 
                 não é o recomendado, porque além de deixar o método extenso, dificulta sua manutenção se for 
-                preciso refatorá-lo. <br>
+                preciso refatorá-lo <abbr title="Processo de modificar o código para melhorar sua estrutura sem alterar sua função."><sup><i class="fa-solid fa-circle-question"></i></sup></abbr>. <br>
                 Uma alternativa para essa situação é, se você precisar fazer mais de uma operação, divida a função 
                 criando outro método, e caso ainda precise, chame-o dentro do método principal.
             </p>
@@ -163,13 +166,14 @@
                 }
             </code>
         </pre>
+        <span>Trecho de Código - 07</span>
     </div>
     <div class="explain-content">
         <div>
             <p>
                 Note que poderíamos ter no método principal tudo o que os métodos auxiliares estão fazendo, 
                 mas decidimos deixar no principal somente o que é descrito pelo seu nome, gerar o título. O 
-                tramento dos documentos, a verificação de idade e qualquer outra função para que o título 
+                tratamento dos documentos, a verificação de idade e qualquer outra função para que o título 
                 possa ser gerado, pode ficar em um método separado. <br><br>
                 Isso ajuda a deixar o código organizado e mais fácil de entender. Além de que esses métodos 
                 auxiliares podem ser utilizados por outros métodos, não só o principal, o que reduz também 

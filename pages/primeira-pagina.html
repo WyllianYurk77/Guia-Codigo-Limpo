@@ -30,17 +30,18 @@
         <pre id="highlighting" aria-hidden="true">
             <code class="language-java" id="highlighting-content">
                 // método que recebe dois números e soma-os
-                metodoDeSoma(int numero1, int numero2) {
-                    soma = numero1 + 2;
+                metodoDeSoma(int primeiroValor, int segundoValor) {
+                    soma = primeiroValor + 2;
                     return soma;
                 }
             </code>
         </pre>
+        <span>Trecho de Código - 02</span>
     </div>
     <div class="explain-content">
         <div>
             <p>
-                De onde veio o número <strong>2</strong>? Qual seu significado? Pois é… <br>
+                No Trecho de Código - 02, de onde veio o número <strong>2</strong>? Qual seu significado? Pois é… <br>
                 Imagina ter números assim espalhados por códigos gigantes em um sistema.
                 E, por incrível que pareça, acontece com frequência. <br>
                 Ter estes números no seu código abre portas para bugs e problemas mais sérios na aplicação, por exemplo: <br>
@@ -62,18 +63,19 @@
             <code class="language-java" id="highlighting-content">
                 // método que recebe dois números e soma-os com 
                 // o ano em que estamos
-                int ANO_ATUAL = 2022;
-                metodoDeSoma(int numero1, int numero2) {
-                    soma = numero1 + numero2 + ANO_ATUAL;
+                int ANO_ATUAL = 0;
+                metodoDeSoma(int primeiroValor, int segundoValor) {
+                    soma = primeiroValor + segundoValor + ANO_ATUAL;
                     return soma;
                 }
             </code>
         </pre>
+        <span>Trecho de Código - 03</span>
     </div>
     <div class="explain-content">
         <div>
             <p>
-                No código acima podemos ver que não há mais nenhum número solto. <br>
+                No Trecho de Código - 03 podemos ver que não há mais nenhum número solto. <br>
                 Temos uma constante <strong>ANO_ATUAL</strong> que está guardando um valor que pode ser alterado. <br>
                 Então se o ano estivesse sendo usado em várias partes de um código, só seria necessário modificá-lo na
                 constante, facilitando a manutenção desse código. <br>
@@ -96,21 +98,28 @@
         <a href="home.html"><button class="btn-voltar">Voltar</button></a>
     </div>
 
+    <script>
+    
+        window.onload = function changeYear() {
+            var ano = document.querySelectorAll(".number")[1];
+            var data = new Date();
+            ano.innerHTML = data.getFullYear();
+            console.log(ano.innerHTML);
+        }
+    
+        function update(text) {
+            let result_element = document.querySelector("#highlighting-content");
+            // Update code
+            result_element.innerText = text;
+            // Syntax Highlight
+            Prism.highlightElement(result_element);
+            
+        }
+    
+    </script>
+
 </body>
 <footer>
     Direitos reservados a Samuel Almeida Barros de Melo &#169; e Wyllian de Asevedo Mendes &#169;
 </footer>
-
-<script>
-
-    function update(text) {
-        let result_element = document.querySelector("#highlighting-content");
-        // Update code
-        result_element.innerText = text;
-        // Syntax Highlight
-        Prism.highlightElement(result_element);
-        
-    }
-
-</script>
 </html>
