@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividades - Números Mágicos</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../prism/prism.css">
+    <link rel="shortcut icon" href="../assets/favicon-32x32.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/3f8996b2ae.js" crossorigin="anonymous"></script>
+    <script src="../prism/prism.js"></script>
+</head>
+<body>
+    <div class="menu">
+        <a href="home.html"><em class="fa-solid fa-house"></em></a>
+    </div>
+    <h1 class="titulo">Atividades sobre Números Mágicos</h1>
+    <br>
+    <div class="explain-content">
+        <div>
+            <p>
+                01 - No Código 01 existem 2 números mágicos, um é referente ao limite do cartão e o 
+                outro é referente ao ano de validade, substitua esses números por constantes seguindo
+                o padrão já estudado:
+            </p>
+            
+        </div>
+    </div>
+
+    <div class="exemplo-codigo">
+        <pre id="highlighting" aria-hidden="true">
+            <code class="language-java" id="highlighting-content">
+                1  public String verificarCartao(Cartao cartao) {
+                2      if(cartao.getLimite() >= 1000) {
+                3          if(cartao.getAnoValidade() >= 2030) {
+                4              return "Cartão está válido.";
+                5          }
+                6      }
+                7      else {
+                8          return "Cartão está vencido ou não possui limite sufuciente.";
+                9      }
+                10 }
+            </code>
+        </pre>
+        <span>Código 01</span>
+    </div>
+    <div class="atv-container">
+        <div class="atv-content">
+            <label for="resposta"><strong>Digite aqui o nome da constante para o limite do cartão:</strong> </label>
+            <input id="resposta" type="text" maxlength="13" oninput="update(this.value);">
+        </div>
+        <div class="atv-content">
+            <label for="resposta2"><strong>Digite aqui o nome da constante para o ano de validade:</strong> </label>
+            <input id="resposta2" type="text" maxlength="12" oninput="update2(this.value);">
+        </div>
+        
+        <div class="box-aviso">
+            <input class="enviar" type="button" value="Enviar" onclick="submitAnswer1()">
+            <span id="aviso" hidden="true"></span>
+        </div>
+    </div>
+
+    <div class="explain-content">
+        <div>
+            <p>
+                02 - Qual constante é a mais correta de se utilizar para substituir o número mágico
+                presente no Código 02?
+            </p>
+            
+        </div>
+    </div>
+    <div class="exemplo-codigo">
+        <pre id="highlighting" aria-hidden="true">
+            <code class="language-java" id="highlighting-content">
+                1  public int compararValorComPadrao(int valor) {
+                2      if(valor == 100) {
+                3          System.out.println("O valor é igual ao valor padrão.");
+                4      } 
+                5      else if(valor &gt; 100) {
+                6          System.out.println("O valor é maior que o valor padrão.");
+                7      } 
+                8      else if(valor &lt; 100) {
+                9          System.out.println("O valor é menor que o valor padrão.");
+                10     }
+                11 }
+            </code>
+        </pre>
+        <span>Código 02</span>
+    </div>
+
+    <div class="atv-container">
+        <div class="atv-content-box">
+            <form class="form-questao-2">
+                <div>
+                    <input type="radio" name="alternativa" id="alt-1" value="1">
+                    <label for="alt-1" id="alt-label">VALOR-PADRAO</label>
+                </div>
+                <div>
+                    <input type="radio" name="alternativa" id="alt-2" value="2">
+                    <label for="alt-2" id="alt-label">ValorPadrao</label>
+                </div>
+                <div>
+                    <input type="radio" name="alternativa" id="alt-3" value="3">
+                    <label for="alt-3" id="alt-label">VALOR_PADRAO</label>
+                </div>
+                <div>
+                    <input type="radio" name="alternativa" id="alt-4" value="4">
+                    <label for="alt-4" id="alt-label">valor_padrao</label>
+                </div>
+            </form> 
+        </div>
+        
+        <div class="box-aviso">
+            <input class="enviar" type="button" value="Enviar" onclick="submitAnswer2()">
+            <span id="aviso" hidden="true"></span>
+        </div>
+    </div>
+
+    <br><br>
+
+    <div class="btn-container">
+        <a href="segunda-pagina.html"><button class="btn-voltar">Voltar</button></a>
+    </div>
+
+    <script>
+
+        function update(text) {
+            let result_element = document.querySelectorAll(".number")[2];
+            result_element.innerText = text;
+            Prism.highlightElement(result_element);
+        }
+
+        function update2(text) {
+            let result_element = document.querySelectorAll(".number")[4];
+            result_element.innerText = text;
+            Prism.highlightElement(result_element);
+        }
+
+        function submitAnswer1() {
+            var resposta = document.querySelector("#resposta");
+            var resposta2 = document.querySelector("#resposta2");
+            var aviso = document.querySelectorAll("#aviso")[0];
+            aviso.hidden = false;
+
+            if(resposta.value === "LIMITE_CARTAO" && resposta2.value === "ANO_VALIDADE") {
+                aviso.innerHTML = "<strong>Resposta Correta</strong>!";
+                aviso.style.backgroundColor = "#1cc771";
+            }
+            else {
+                aviso.innerHTML = "<strong>Não foi dessa vez, tente novamente</strong>!"
+                aviso.style.backgroundColor = "#db2828";
+            }
+        }
+        function submitAnswer2() {
+            var resposta = document.querySelector('input[name="alternativa"]:checked');
+            var aviso = document.querySelectorAll("#aviso")[1];
+            aviso.hidden = false;
+
+            if(resposta == null) {
+                aviso.innerHTML = "<strong>Você ainda não marcou uma alternativa!</strong>"
+                aviso.style.backgroundColor = "#ebbc22";
+                // aviso.style.color = "black";
+            }
+
+            if(resposta.value == "3") {
+                aviso.innerHTML = "<strong>Resposta Correta</strong>!";
+                aviso.style.backgroundColor = "#1cc771";
+            }
+            else {
+                aviso.innerHTML = "<strong>Não foi dessa vez, tente novamente</strong>!"
+                aviso.style.backgroundColor = "#db2828";
+            }
+        }
+    </script>
+</body>
+<footer>
+    Direitos reservados a Samuel Almeida Barros de Melo &#169; e Wyllian de Asevedo Mendes &#169;
+</footer>
+</html>
