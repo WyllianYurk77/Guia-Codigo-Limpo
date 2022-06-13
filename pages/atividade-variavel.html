@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividades - Variáveis</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../prism/prism.css">
+    <link rel="shortcut icon" href="../assets/favicon-32x32.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/3f8996b2ae.js" crossorigin="anonymous"></script>
+    <script src="../prism/prism.js"></script>
+</head>
+<body>
+    <div class="menu">
+        <a href="home.html"><em class="fa-solid fa-house"></em></a>
+    </div>
+    <h1 class="titulo">Atividades sobre Variáveis</h1>
+    <br>
+    <div class="explain-content">
+        <div>
+            <p>
+                01 - Declare no Código 01 abaixo uma variável para guardar o valor dos lados de um quadrado, 
+                utilizando os conceitos que você já aprendeu neste guia:
+            </p>
+            
+        </div>
+    </div>
+
+    <div class="exemplo-codigo">
+        <pre id="highlighting" aria-hidden="true">
+            <code class="language-java" id="highlighting-content">
+                1 public class Variavel {
+                2     public static void main(String args[]) {
+                3         int + = 4;
+                4     
+                5         System.out.println("Um quadrado tem " + ladosQuadrado + " lados.");
+                6     }
+                7 }
+            </code>
+        </pre>
+        <span>Código 01</span>
+    </div>
+    <div class="atv-container">
+        <div class="atv-content">
+            <label for="resposta"><strong>Digite aqui o nome da variável correta:</strong> </label>
+            <input id="resposta" type="text" maxlength="13" oninput="update(this.value);">
+        </div>
+        
+        <div class="box-aviso">
+            <input class="enviar" type="button" value="Enviar" onclick="submitAnswer1()">
+            <span id="aviso" hidden="true"></span>
+        </div>
+    </div>
+
+    <div class="explain-content">
+        <div>
+            <p>
+                02 - Identifique no Código 02 abaixo qual a variável que não segue o padrão de boas práticas de programação e marque a alternativa correta:
+            </p>
+            
+        </div>
+    </div>
+    <div class="exemplo-codigo">
+        <pre id="highlighting" aria-hidden="true">
+            <code class="language-java" id="highlighting-content">
+                1 public class Variavel {
+                2     public static void main(String args[]) {
+                3         String nomePai = "Francisco";
+                4         double salário = 1000.0;
+                5         int quantidadeLivros = 20;
+                6         boolean ativo = false;
+                7    }
+                8 }
+            </code>
+        </pre>
+        <span>Código 02</span>
+    </div>
+
+    <div class="atv-container">
+        <div class="atv-content-box">
+            <form class="form-questao-2">
+                <div>
+                    <input type="radio" name="alternativa" id="alt-1" value="3">
+                    <label for="alt-1" id="alt-label">Variável da linha 3</label>
+                </div>
+                <div>
+                    <input type="radio" name="alternativa" id="alt-2" value="4">
+                    <label for="alt-2" id="alt-label">Variável da linha 4</label>
+                </div>
+                <div>
+                    <input type="radio" name="alternativa" id="alt-3" value="5">
+                    <label for="alt-3" id="alt-label">Variável da linha 5</label>
+                </div>
+                <div>
+                    <input type="radio" name="alternativa" id="alt-4" value="6">
+                    <label for="alt-4" id="alt-label">Variável da linha 6</label>
+                </div>
+            </form> 
+        </div>
+        
+        <div class="box-aviso">
+            <input class="enviar" type="button" value="Enviar" onclick="submitAnswer2()">
+            <span id="aviso" hidden="true"></span>
+        </div>
+    </div>
+
+    <br><br>
+
+    <div class="btn-container">
+        <a href="segunda-pagina.html"><button class="btn-voltar">Voltar</button></a>
+    </div>
+
+    <script>
+        window.onload = function changeOperator() {
+            var operador = document.querySelector(".operator");
+            operador.innerHTML = "?";
+        }
+
+        function update(text) {
+            let result_element = document.querySelector(".operator");
+            result_element.innerText = text;
+            // Syntax Highlight
+            Prism.highlightElement(result_element);
+        }
+
+        function submitAnswer1() {
+            var resposta = document.querySelector("#resposta");
+            var aviso = document.querySelectorAll("#aviso")[0];
+            aviso.hidden = false;
+
+            if(resposta.value == "ladosQuadrado") {
+                aviso.innerHTML = "<strong>Resposta Correta</strong>!";
+                aviso.style.backgroundColor = "#1cc771";
+            }
+            else {
+                aviso.innerHTML = "<strong>Não foi dessa vez, tente novamente</strong>!"
+                aviso.style.backgroundColor = "#db2828";
+            }
+        }
+        function submitAnswer2() {
+            var resposta = document.querySelector('input[name="alternativa"]:checked');
+            var aviso = document.querySelectorAll("#aviso")[1];
+            aviso.hidden = false;
+
+            if(resposta == null) {
+                aviso.innerHTML = "<strong>Você ainda não marcou uma alternativa!</strong>"
+                aviso.style.backgroundColor = "#ebbc22";
+                // aviso.style.color = "black";
+            }
+
+            if(resposta.value == "4") {
+                aviso.innerHTML = "<strong>Resposta Correta</strong>!";
+                aviso.style.backgroundColor = "#1cc771";
+            }
+            else {
+                aviso.innerHTML = "<strong>Não foi dessa vez, tente novamente</strong>!"
+                aviso.style.backgroundColor = "#db2828";
+            }
+        }
+    </script>
+</body>
+<footer>
+    Direitos reservados a Samuel Almeida Barros de Melo &#169; e Wyllian de Asevedo Mendes &#169;
+</footer>
+</html>
