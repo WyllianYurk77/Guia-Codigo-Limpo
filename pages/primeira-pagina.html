@@ -29,11 +29,11 @@
     <div class="exemplo-codigo">
         <pre id="highlighting" aria-hidden="true">
             <code class="language-java" id="highlighting-content">
-                // método que recebe dois números e soma-os
-                metodoDeSoma(int primeiroValor, int segundoValor) {
-                    soma = primeiroValor + 2;
-                    return soma;
-                }
+                1 // método que recebe dois números e soma-os
+                2 metodoDeSoma(int primeiroValor, int segundoValor) {
+                3     soma = primeiroValor + 2;
+                4     return soma;
+                5 }
             </code>
         </pre>
         <span>Trecho de Código - 02</span>
@@ -61,13 +61,13 @@
     <div class="exemplo-codigo">
         <pre id="highlighting" aria-hidden="true">
             <code class="language-java" id="highlighting-content">
-                // método que recebe dois números e soma-os com 
-                // o ano em que estamos
-                int ANO_ATUAL = 0;
-                metodoDeSoma(int primeiroValor, int segundoValor) {
-                    soma = primeiroValor + segundoValor + ANO_ATUAL;
-                    return soma;
-                }
+                1 // método que recebe dois números e soma-os com 
+                2 // o ano em que estamos
+                3 int ANO_ATUAL = 0;
+                4 metodoDeSoma(int primeiroValor, int segundoValor) {
+                5    soma = primeiroValor + segundoValor + ANO_ATUAL;
+                6     return soma;
+                7 }
             </code>
         </pre>
         <span>Trecho de Código - 03</span>
@@ -101,7 +101,7 @@
     <script>
     
         window.onload = function changeYear() {
-            var ano = document.querySelectorAll(".number")[1];
+            var ano = document.querySelectorAll(".number")[9];
             var data = new Date();
             ano.innerHTML = data.getFullYear();
         }

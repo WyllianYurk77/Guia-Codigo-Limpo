@@ -55,21 +55,21 @@
     <div class="exemplo-codigo">
         <pre id="highlighting" aria-hidden="true">
             <code class="language-java" id="highlighting-content">
-                public String x(List&lt;double&gt; y) {
-                    double q = 0.0;
-
-                    for(int kk = 0; kk &lt; 3; kk++) {
-                        q = q + y.get(kk);
-                    }
-
-                    q = q / 3;
-
-                    if(q &gt;= 7.0) {
-                        return "Aprovado";
-                    }
-                    
-                    return "Reprovado";
-                }
+                1  public String x(List&lt;double&gt; y) {
+                2      double q = 0.0;
+                3 
+                4      for(int kk = 0; kk &lt; 3; kk++) {
+                5          q = q + y.get(kk);
+                6      }
+                7
+                8      q = q / 3;
+                9
+                10     if(q &gt;= 7.0) {
+                11         return "Aprovado";
+                12     }
+                13    
+                14     return "Reprovado";
+                15 }
             </code>
         </pre>
         <span>Trecho de Código - 05</span>
@@ -88,21 +88,21 @@
     <div class="exemplo-codigo">
         <pre id="highlighting" aria-hidden="true">
             <code class="language-java" id="highlighting-content">
-                public String mostrarResultadoFinalDoAluno(List&lt;double&gt; notas) {
-                    double media = 0.0;
-
-                    for(int contador = 0; contador &lt; notas.size(); contador++) {
-                        media = media + notas.get(contador);
-                    }
-
-                    media = media / notas.size();
-
-                    if(media &gt;= 7.0) {
-                        return "Aprovado";
-                    }
-
-                    return "Reprovado";
-                }
+                1  public String mostrarResultadoFinalDoAluno(List&lt;double&gt; notas) {
+                2      double media = 0.0;
+                3 
+                4      for(int contador = 0; contador &lt; notas.size(); contador++) {
+                5          media = media + notas.get(contador);
+                6      }
+                7
+                8      media = media / notas.size();
+                9
+                10     if(media &gt;= 7.0) {
+                11         return "Aprovado";
+                12     }
+                13
+                14     return "Reprovado";
+                15 }
             </code>
         </pre>
         <span>Trecho de Código - 06</span>
@@ -136,34 +136,34 @@
     <div class="exemplo-codigo">
         <pre id="highlighting" aria-hidden="true">
             <code class="language-java" id="highlighting-content">
-                // método principal
-                public String gerarTituloEleitor(Pessoa pessoa) {
-
-                    if(temIdadePermitida(pessoa.getIdade())) {
-
-                        verificarDocumentos(pessoa.getDocumentos());
-
-                        // aqui fica o código que gera o título...
-
-                        return "Título gerado com sucesso.";
-                    }
-                    
-                    return "Você ainda não tem idade para gerar o título de eleitor." 
-                }
-
-                // primeiro método auxiliar
-                public boolean temIdadePermitida(int idade) {
-                    if(idade &gt;= 16) {
-                        return true;
-                    }
-
-                    return false;
-                }
-
-                // segundo método auxiliar
-                public boolean verificarDocumentos(List&lt;String&gt; documentos) {
-                    // código para verificar os documentos...
-                }
+                1  // método principal
+                2  public String gerarTituloEleitor(Pessoa pessoa) {
+                3 
+                4      if(temIdadePermitida(pessoa.getIdade())) {
+                5
+                6          verificarDocumentos(pessoa.getDocumentos());
+                7
+                8          // aqui fica o código que gera o título...
+                9
+                10         return "Título gerado com sucesso.";
+                11     }
+                12    
+                13     return "Você ainda não tem idade para gerar o título de eleitor." 
+                14 }
+                15
+                16 // primeiro método auxiliar
+                17 public boolean temIdadePermitida(int idade) {
+                18     if(idade &gt;= 16) {
+                19         return true;
+                20     }
+                21
+                22     return false;
+                23 }
+                24
+                25 // segundo método auxiliar
+                26 public boolean verificarDocumentos(List&lt;String&gt; documentos) {
+                27     // código para verificar os documentos...
+                28 }
             </code>
         </pre>
         <span>Trecho de Código - 07</span>
