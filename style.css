@@ -249,4 +249,5 @@ input[type="radio"] {
 #alt-label {
     width: 140px;
     display: inline-block;
+    text-align: start;
 }
