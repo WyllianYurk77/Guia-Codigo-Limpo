@@ -51,29 +51,29 @@
     <div class="exemplo-codigo">
         <pre id="highlighting" aria-hidden="true" class="exemplo-no-identation">
             <code class="language-java" id="no-identation">
-                // sem separação de linhas e sem indentação
-                public class Pessoa {
-                    private String nome;
-                    private int idade;
-                    private String cpf;
-                    public Pessoa(String nome, int idade, String cpf) {
-                        this.nome = nome;
-                        this.idade = idade;
-                        this.cpf = cpf;
-                    }
-                    public String mostrarFasesPessoa(Pessoa pessoa) {
-                        if(pessoa.getIdade() &lt;= 13) {
-                            return pessoa.getNome() + " é criança.";
-                        }
-                        else if(pessoa.getIdade() &lt; 18) {
-                            return pessoa.getNome() + " é adolescente.";
-                        }
-                        else if(pessoa.getIdade() &lt; 60) {
-                            return pessoa.getNome() + " é adulto.";
-                        }
-                        pessoa.getNome() + " é idoso.";
-                    }
-                }
+                1  // sem separação de linhas e sem indentação
+                2  public class Pessoa {
+                3      private String nome;
+                4      private int idade;
+                5      private String cpf;
+                6      public Pessoa(String nome, int idade, String cpf) {
+                7          this.nome = nome;
+                8          this.idade = idade;
+                9          this.cpf = cpf;
+                10     }
+                11     public String mostrarFasesPessoa(Pessoa pessoa) {
+                12         if(pessoa.getIdade() &lt;= 13) {
+                13             return pessoa.getNome() + " é criança.";
+                14         }
+                15         else if(pessoa.getIdade() &lt; 18) {
+                16             return pessoa.getNome() + " é adolescente.";
+                17         }
+                18         else if(pessoa.getIdade() &lt; 60) {
+                19             return pessoa.getNome() + " é adulto.";
+                20         }
+                21         pessoa.getNome() + " é idoso.";
+                22     }
+                23 }
             </code>
         </pre>
         <span>Trecho de Código - 08</span>
@@ -81,32 +81,32 @@
     <div class="exemplo-codigo">
         <pre id="highlighting" aria-hidden="true">
             <code class="language-java" id="highlighting-content">
-                // formatado corretamente
-                public class Pessoa {
-                    private String nome;
-                    private int idade;
-                    private String cpf;
-
-                    public Pessoa(String nome, int idade, String cpf) {
-                        this.nome = nome;
-                        this.idade = idade;
-                        this.cpf = cpf;
-                    }
-
-                    public String mostrarFasesPessoa(Pessoa pessoa) {
-                        if(pessoa.getIdade() &lt;= 13) {
-                            return pessoa.getNome() + " é criança.";
-                        }
-                        else if(pessoa.getIdade() &lt; 18) {
-                            return pessoa.getNome() + " é adolescente.";
-                        }
-                        else if(pessoa.getIdade() &lt; 60) {
-                            return pessoa.getNome() + " é adulto.";
-                        }
-                        
-                        pessoa.getNome() + " é idoso.";
-                    }
-                }
+                1  // formatado corretamente
+                2  public class Pessoa {
+                3      private String nome;
+                4      private int idade;
+                5      private String cpf;
+                6 
+                7      public Pessoa(String nome, int idade, String cpf) {
+                8          this.nome = nome;
+                9          this.idade = idade;
+                10         this.cpf = cpf;
+                11     }
+                12
+                13     public String mostrarFasesPessoa(Pessoa pessoa) {
+                14         if(pessoa.getIdade() &lt;= 13) {
+                15             return pessoa.getNome() + " é criança.";
+                16         }
+                17         else if(pessoa.getIdade() &lt; 18) {
+                18             return pessoa.getNome() + " é adolescente.";
+                19         }
+                20         else if(pessoa.getIdade() &lt; 60) {
+                21             return pessoa.getNome() + " é adulto.";
+                22         }
+                23        
+                24         pessoa.getNome() + " é idoso.";
+                25     }
+                26 }
             </code>
         </pre>
         <span>Trecho de Código - 09</span>
@@ -129,10 +129,10 @@
     <div class="exemplo-codigo">
         <pre id="highlighting" aria-hidden="true">
             <code class="language-java" id="highlighting-content">
-                // verifica se o funcionario pode receber benefícios
-                if(funcionario.getTempoTrabalho &gt; 20 && funcionario.getIdade() &gt; 65) {
-
-                }
+                1 // verifica se o funcionario pode receber benefícios
+                2 if(funcionario.getTempoTrabalho &gt; 20 && funcionario.getIdade() &gt; 65) {
+                3
+                4 }
             </code>
         </pre>
         <span>Trecho de Código - 10</span>
@@ -148,9 +148,9 @@
     <div class="exemplo-codigo">
         <pre id="highlighting" aria-hidden="true">
             <code class="language-java" id="highlighting-content">
-                if(funcionario.podeReceberBeneficios()) {
-
-                }
+                1 if(funcionario.podeReceberBeneficios()) {
+                2
+                3 }
             </code>
         </pre>
         <span>Trecho de Código - 11</span>
@@ -167,20 +167,20 @@
     <div class="exemplo-codigo">
         <pre id="highlighting" aria-hidden="true">
             <code class="language-java" id="highlighting-content">
-                /* Nome da pessoa */
-                private String nome;
-
-                /* Dia do mês */
-                private int diaDoMes;
-
-                /* Construtor padrão */
-                public Pessoa() {
-                }
-
-                /* Retorna a idade */
-                public int getIdade() {
-                    return this.idade;
-                }
+                1  /* Nome da pessoa */
+                2  private String nome;
+                3
+                4  /* Dia do mês */
+                5  private int diaDoMes;
+                6
+                7  /* Construtor padrão */
+                8  public Pessoa() {
+                9  }
+                10
+                11 /* Retorna a idade */
+                12 public int getIdade() {
+                13     return this.idade;
+                14 }
             </code>
         </pre>
         <span>Trecho de Código - 12</span>
