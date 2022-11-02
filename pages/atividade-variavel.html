@@ -120,7 +120,6 @@
         function update(text) {
             let result_element = document.querySelector(".operator");
             result_element.innerText = text;
-            // Syntax Highlight
             Prism.highlightElement(result_element);
         }
 
@@ -146,7 +145,6 @@
             if(resposta == null) {
                 aviso.innerHTML = "<strong>Você ainda não marcou uma alternativa!</strong>"
                 aviso.style.backgroundColor = "#ebbc22";
-                // aviso.style.color = "black";
             }
 
             if(resposta.value == "4") {
