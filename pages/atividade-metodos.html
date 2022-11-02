@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividades - Métodos</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../prism/prism.css">
+    <link rel="shortcut icon" href="../assets/favicon-32x32.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/3f8996b2ae.js" crossorigin="anonymous"></script>
+    <script src="../prism/prism.js"></script>
+</head>
+<body>
+    <div class="menu">
+        <a href="home.html"><em class="fa-solid fa-house"></em></a>
+    </div>
+    <h1 class="titulo">Atividades sobre Métodos</h1>
+    <br>
+    <div class="explain-content">
+        <div>
+            <p>
+                01 - Defina o melhor nome para o método/função abaixo (Código 01), levando em consideração 
+                o que ele está fazendo e utilizando as regras aprendidas: <abbr title="Dica: o método está relacionado a um cálculo matemático."><sup><i class="fa-solid fa-circle-question"></i></sup></abbr>
+            </p>
+        </div>
+    </div>
+
+    <div class="exemplo-codigo">
+        <pre id="highlighting" aria-hidden="true">
+            <code class="language-java" id="highlighting-content">
+                1  public class Atividade {
+                2      public static void main(String args[]) {
+                3         
+                4          public Integer xxx(Poligono poligono) {
+                5              Integer area;
+                5              if(poligono.isTriangulo()) {
+                6                  area = (poligono.getBase() * poligono.getAltura()) / 2;
+                7              }
+                8              else if(poligono.isQuadrado()) {
+                9                  area = poligono.getLado() * poligono.getLado();
+                10             }
+                11             else if(poligono.isRetangulo()) {
+                12                 area = poligono.getBase() * poligono.getAltura();
+                13             }
+                14             else if(poligono.isCirculo()) {
+                15                 area = poligono.getPi() * (poligono.getRaio() * poligono.getRaio());
+                16             }
+                17             return area;
+                18         }
+                19     }
+                20 }
+            </code>
+        </pre>
+        <span>Código 01</span>
+    </div>
+    <div class="atv-container">
+        <div class="atv-content">
+            <label for="resposta"><strong>Digite aqui o melhor nome para o método:</strong> </label>
+            <input id="resposta" type="text" maxlength="20" oninput="update(this.value);">
+        </div>
+        
+        <div class="box-aviso">
+            <input class="enviar" type="button" value="Enviar" onclick="submitAnswer1()">
+            <span id="aviso" hidden="true"></span>
+        </div>
+    </div>
+
+    <div class="explain-content">
+        <div>
+            <p>
+                02 - Qual dos métodos abaixo (Código 02) não está adequado as práticas do código limpo?
+            </p>
+            
+        </div>
+    </div>
+    <div class="exemplo-codigo">
+        <pre id="highlighting" aria-hidden="true">
+            <code class="language-java" id="highlighting-content">
+                1  public String exibeAlertaMensagem() {
+                2      return System.out.println("Você possui mensagens não lidas.");
+                3  }
+                4 
+                5  public boolean estaDentroPeriodoPermitido(Calendar periodo) {
+                6      if(periodo.before(PERIODO_PERMITIDO)) {
+                7          return true;
+                8      }
+                9      else if(periodo.get(Calendar.DAY_OF_WEEK) == Calendar.SUNDAY) {
+                10         System.out.println("O período se encontra em um domingo!");
+                11         cadastro.setPeriodoRealizacao(periodo);
+                12     }
+                13     return false;
+                14 }
+                15
+                16 private void atualizaDataVenda(Produto p) {
+                17     p.setDataVenda(new Date());
+                18 }
+                19
+                20 public MarcaCarro descobreMarcaCarroSelecionado(Carro carro) {
+                21     return analisaMarcaCarro(carro);
+                22 }
+                23
+                
+            </code>
+        </pre>
+        <span>Código 02</span>
+    </div>
+
+    <div class="atv-container">
+        <div class="atv-content-box">
+            <form class="form-questao-2">
+                <div>
+                    <input type="radio" name="alternativa" id="alt-1" value="1">
+                    <label for="alt-1" id="alt-label">exibeAlertaMensagem</label>
+                </div>
+                <div>
+                    <input type="radio" name="alternativa" id="alt-2" value="2">
+                    <label for="alt-2" id="alt-label">estaDentroPeriodoPermitido</label>
+                </div>
+                <div>
+                    <input type="radio" name="alternativa" id="alt-3" value="3">
+                    <label for="alt-3" id="alt-label">atualizaDataVenda</label>
+                </div>
+                <div>
+                    <input type="radio" name="alternativa" id="alt-4" value="4">
+                    <label for="alt-4" id="alt-label">descobreMarcaCarroSelecionado</label>
+                </div>
+            </form> 
+        </div>
+        
+        <div class="box-aviso">
+            <input class="enviar" type="button" value="Enviar" onclick="submitAnswer2()">
+            <span id="aviso" hidden="true"></span>
+        </div>
+    </div>
+
+    <br><br>
+
+    <div class="btn-container">
+        <a href="terceira-pagina.html"><button class="btn-voltar">Voltar</button></a>
+    </div>
+
+    <script>
+        window.onload = function changeOperator() {
+            var operador = document.querySelectorAll(".function")[1];
+            operador.innerHTML = "? ";
+        }
+
+        function update(text) {
+            let result_element = document.querySelectorAll(".function")[1];
+            result_element.innerText = text;
+            Prism.highlightElement(result_element);
+        }
+
+        function submitAnswer1() {
+            var resposta = document.querySelector("#resposta");
+            var aviso = document.querySelectorAll("#aviso")[0];
+            aviso.hidden = false;
+
+            if(resposta.value == "calculaAreaPoligono" || resposta.value == "calcularAreaPoligono") {
+                aviso.innerHTML = "<strong>Resposta Correta</strong>!";
+                aviso.style.backgroundColor = "#1cc771";
+            }
+            else {
+                aviso.innerHTML = "<strong>Não foi dessa vez, tente novamente</strong>!"
+                aviso.style.backgroundColor = "#db2828";
+            }
+        }
+        function submitAnswer2() {
+            var resposta = document.querySelector('input[name="alternativa"]:checked');
+            var aviso = document.querySelectorAll("#aviso")[1];
+            aviso.hidden = false;
+
+            if(resposta == null) {
+                aviso.innerHTML = "<strong>Você ainda não marcou uma alternativa!</strong>"
+                aviso.style.backgroundColor = "#ebbc22";
+            }
+
+            if(resposta.value == "2") {
+                aviso.innerHTML = "<strong>Resposta Correta</strong>!";
+                aviso.style.backgroundColor = "#1cc771";
+            }
+            else {
+                aviso.innerHTML = "<strong>Não foi dessa vez, tente novamente</strong>!"
+                aviso.style.backgroundColor = "#db2828";
+            }
+        }
+    </script>
+</body>
+<footer>
+    Direitos reservados a Samuel Almeida Barros de Melo &#169; e Wyllian de Asevedo Mendes &#169;
+</footer>
+</html>
