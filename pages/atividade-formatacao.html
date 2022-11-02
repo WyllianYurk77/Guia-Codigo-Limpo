@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividades - Formatação</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../prism/prism.css">
+    <link rel="shortcut icon" href="../assets/favicon-32x32.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/3f8996b2ae.js" crossorigin="anonymous"></script>
+    <script src="../prism/prism.js"></script>
+</head>
+<body>
+    <div class="menu">
+        <a href="home.html"><em class="fa-solid fa-house"></em></a>
+    </div>
+    <h1 class="titulo">Atividades sobre Formatação e Extras</h1>
+    <br>
+    <div class="explain-content">
+        <div>
+            <p>
+                01 - No Código 01, qual o trecho possui a indentação correta?
+            </p>
+        </div>
+    </div>
+
+    <div class="exemplo-codigo">
+        <pre id="highlighting" aria-hidden="true">
+            <code class="language-java" id="highlighting-content">
+                1  // Trecho 01
+                2  for(carta : cartas) {
+                3      cartaAtual = carta;
+                4  }
+                5  
+                6  // Trecho 02
+                7  if(animal.getPeso() &gt; 80) { porte = "Grande";
+                8}else {
+                9porte = "Pequeno"; }
+                10 
+                11 // Trecho 03
+                12          protected void verificaSistema() {
+                13                             sistema.setStatus(VERIFICADO);
+                14                                  }
+                15 // Trecho 04
+                16    private int idade;
+                17      private String nome;
+                18        private Endereco endereco;
+                19      private String cpf;
+                20    private int numeroCelular;
+                21 
+                22 
+                23
+                
+            </code>
+        </pre>
+        <span>Código 01</span>
+    </div>
+
+    <div class="atv-container">
+        <div class="atv-content-box">
+            <form class="form-questao-2">
+                <div>
+                    <input type="radio" name="alternativa" id="alt-1" value="1">
+                    <label for="alt-1" id="alt-label">Trecho 01</label>
+                </div>
+                <div>
+                    <input type="radio" name="alternativa" id="alt-2" value="2">
+                    <label for="alt-2" id="alt-label">Trecho 02</label>
+                </div>
+                <div>
+                    <input type="radio" name="alternativa" id="alt-3" value="3">
+                    <label for="alt-3" id="alt-label">Trecho 03</label>
+                </div>
+                <div>
+                    <input type="radio" name="alternativa" id="alt-4" value="4">
+                    <label for="alt-4" id="alt-label">Trecho 04</label>
+                </div>
+            </form> 
+        </div>
+        
+        <div class="box-aviso">
+            <input class="enviar" type="button" value="Enviar" onclick="submitAnswer1()">
+            <span id="aviso" hidden="true"></span>
+        </div>
+    </div>
+
+    <div class="explain-content">
+        <div>
+            <p>
+                02 - Observe o código abaixo (Código 02), o que você acha que não deveria ter nele? Digite no campo a sua resposta:
+            </p>
+            
+        </div>
+    </div>
+
+    <div class="exemplo-codigo">
+        <pre id="highlighting" aria-hidden="true">
+            <code class="language-java" id="highlighting-content">
+                1  public class Atividade {
+                2      public static void main(String args[]) {
+                3         
+                4          public String mostrarTamanhoPalavra(String palavra) {
+                5              //int count = 0;
+                5              //for(char c : palavra.toCharArray())
+                6              //    count++;
+                7              //}
+                8              return System.out.println("A palavra " + palavra + " possui " + palavra.length() + " letras.");
+                9          }
+                10     }
+                11 }
+            </code>
+        </pre>
+        <span>Código 02</span>
+    </div>
+    <div class="atv-container">
+        <div class="atv-content">
+            <label for="resposta2"><strong>Digite aqui a sua resposta:</strong> </label>
+            <input id="resposta2" type="text" maxlength="11">
+        </div>
+        
+        <div class="box-aviso">
+            <input class="enviar" type="button" value="Enviar" onclick="submitAnswer2()">
+            <span id="aviso" hidden="true"></span>
+        </div>
+    </div>
+
+    <div class="explain-content">
+        <div>
+            <p>
+                03 - Refatore o Código 03 de acordo com o que o você aprendeu neste guia:
+            </p>
+            <p>
+                Se necessário, utilize as dicas encontradas na 
+                <abbr title="Está é uma dica!"><sup><i class="fa-solid fa-circle-question"></i></sup></abbr> 
+                ao lado dos campos de texto e acompanhe as mudanças no código após a digitação das respostas.
+            </p>
+        </div>
+    </div>
+
+    <div class="exemplo-codigo">
+        <pre id="highlighting" aria-hidden="true">
+            <code class="language-java" id="highlighting-content">
+                1  public class AtividadeFinal {
+                2      public static void main(String args[]) {
+                3         
+                4          private String + = "Leona Silva";
+                5          private String + = "(83) 99777-7777";
+                6          private int + = 30;
+                7          private static final int MAIOR_IDADE = 18;
+                8          
+                9          public String Mostra(String +, String +) {
+                10             return System.out.println("Olá " + + + ", você tem " + + + " anos de idade.");
+                10         }    
+                11          
+                12         public String xxx() {
+                13             return this.numeroTelefone;
+                14         }
+                15         
+                16         public String xxx(int +) {
+                17             if(+ &gt;= + ) {
+                18                 return System.out.println("É maior de idade.");
+                19             }
+                20             else {
+                21                 return System.out.println("É menor de idade.");
+                22             }
+                23         }
+                24     }
+                25 }
+            </code>
+        </pre>
+        <span>Código 03</span>
+    </div>
+    <div class="atv-container">
+        <div class="atv-content">
+            <label for="resposta3">
+                <strong>Digite o nome da variável da linha 4:</strong> 
+                <abbr title="Dica: observe o valor atribuído a variável."><sup><i class="fa-solid fa-circle-question"></i></sup></abbr>
+            </label>
+            <input id="resposta3" type="text" maxlength="4" oninput="update1(this.value);">
+        </div>
+        <div class="atv-content">
+            <label for="resposta3">
+                <strong>Digite o nome apropriado para a variável da linha 5:</strong> 
+                <abbr title="Dica: lembre-se das regras de escrita de nomes de variáveis e qual delas é a mais utilizada."><sup><i class="fa-solid fa-circle-question"></i></sup></abbr>
+            </label>
+            <input id="resposta3" type="text" maxlength="14" oninput="update2(this.value);">
+        </div>
+        <div class="atv-content">
+            <label for="resposta3">
+                <strong>Digite o nome apropriado para a variável da linha 6:</strong> 
+                <abbr title="Dica: observe se o nome da variável segue a regra correta."><sup><i class="fa-solid fa-circle-question"></i></sup></abbr>
+            </label>
+            <input id="resposta3" type="text" maxlength="5" oninput="update3(this.value);">
+        </div>
+        <div class="atv-content">
+            <label for="resposta3">
+                <strong>Digite o nome apropriado para o método da linha 9:</strong> 
+                <abbr title="Dica: observe atentamente o que este método faz."><sup><i class="fa-solid fa-circle-question"></i></sup></abbr>
+            </label>
+            <input id="resposta3" type="text" maxlength="15" oninput="update4(this.value);">
+        </div>
+        <div class="atv-content">
+            <label for="resposta3">
+                <strong>Digite o nome da primeira variável das linhas 9 e 10:</strong> 
+                <abbr title="Dica: esta primeira variável já foi declarada anteriormente."><sup><i class="fa-solid fa-circle-question"></i></sup></abbr>
+            </label>
+            <input id="resposta3" type="text" maxlength="4" oninput="update5(this.value);">
+        </div>
+        <div class="atv-content">
+            <label for="resposta3">
+                <strong>Digite o nome da segunda variável das linhas 9 e 10:</strong> 
+                <abbr title="Dica: esta primeira variável também já foi declarada anteriormente."><sup><i class="fa-solid fa-circle-question"></i></sup></abbr>
+            </label>
+            <input id="resposta3" type="text" maxlength="5" oninput="update6(this.value);">
+        </div>
+        <div class="atv-content">
+            <label for="resposta3">
+                <strong>Digite o nome apropriado para o método da linha 12:</strong> 
+                <abbr title="Dica: observe atentamente o que este método retorna e reescreva-o corretamente."><sup><i class="fa-solid fa-circle-question"></i></sup></abbr>
+            </label>
+            <input id="resposta3" type="text" maxlength="17" oninput="update7(this.value);">
+        </div>
+        <div class="atv-content">
+            <label for="resposta3">
+                <strong>Digite o nome apropriado para o método da linha 16:</strong> 
+                <abbr title="Dica: nomes de métodos seguem a mesma regra dos nomes de variáveis."><sup><i class="fa-solid fa-circle-question"></i></sup></abbr>
+            </label>
+            <input id="resposta3" type="text" maxlength="18" oninput="update8(this.value);">
+        </div>
+        <div class="atv-content">
+            <label for="resposta3">
+                <strong>Digite o nome da variável das linhas 16 e 17:</strong> 
+                <abbr title="Dica: o que é preciso para fazer esta verificação?"><sup><i class="fa-solid fa-circle-question"></i></sup></abbr>
+            </label>
+            <input id="resposta3" type="text" maxlength="5" oninput="update9(this.value);">
+        </div>
+        <div class="atv-content">
+            <label for="resposta3">
+                <strong>Digite o nome da variável que substitua o número mágico na linha 17:</strong> 
+                <abbr title="Dica: observe se no código já existe alguma constante."><sup><i class="fa-solid fa-circle-question"></i></sup></abbr>
+            </label>
+            <input id="resposta3" type="text" maxlength="11" oninput="update10(this.value);">
+        </div>
+        
+        <div class="box-aviso">
+            <input class="enviar" type="button" value="Enviar" onclick="submitAnswer3()">
+            <span id="aviso" hidden="true"></span>
+        </div>
+    </div>
+    
+    <br><br>
+
+    <div class="btn-container">
+        <a href="quarta-pagina.html"><button class="btn-voltar">Voltar</button></a>
+    </div>
+
+    <script>
+        window.onload = function changeOperator() {
+            var operador1 = document.querySelectorAll(".operator")[9];
+            var operador2 = document.querySelectorAll(".operator")[11];
+            var operador3 = document.querySelectorAll(".operator")[13];
+            var operador4 = document.querySelectorAll(".operator")[16];
+            var operador5 = document.querySelectorAll(".operator")[17];
+            var operador6 = document.querySelectorAll(".operator")[19];
+            var operador7 = document.querySelectorAll(".operator")[22];
+            var operador8 = document.querySelectorAll(".operator")[24];
+            var operador9 = document.querySelectorAll(".operator")[25];
+            var operador10 = document.querySelectorAll(".operator")[27];
+            var function1 = document.querySelectorAll(".class-name")[13];
+            var function2 = document.querySelectorAll(".function")[9];
+            var function3 = document.querySelectorAll(".function")[10];
+            operador1.innerHTML = "?"; //4
+            operador2.innerHTML = "NumeroTelefone"; //5
+            operador3.innerHTML = "Idade"; //6
+            operador4.innerHTML = "?"; //9 (4 e 6)
+            operador5.innerHTML = "?"; //9 (5 e 7)
+            operador6.innerHTML = "?"; //10
+            operador7.innerHTML = "?"; //10
+            operador8.innerHTML = "?"; //16
+            operador9.innerHTML = "?"; //17
+            operador10.innerHTML = "18"; //17 (const)
+            function1.innerHTML = "Mostra"; //9
+            function2.innerHTML = "getNuTel"; //12
+            function3.innerHTML = "VERIFICA-MAIOR-IDADE"; //16
+        }
+
+        function update1(text) {
+            let result_element = document.querySelectorAll(".operator")[9];
+            result_element.innerText = text;
+            Prism.highlightElement(result_element);
+        }
+        function update2(text) {
+            let result_element = document.querySelectorAll(".operator")[11];
+            result_element.innerText = text;
+            Prism.highlightElement(result_element);
+        }
+        function update3(text) {
+            let result_element = document.querySelectorAll(".operator")[13];
+            result_element.innerText = text;
+            Prism.highlightElement(result_element);
+        }
+        function update4(text) {
+            let result_element = document.querySelectorAll(".class-name")[13];
+            result_element.innerText = text;
+            Prism.highlightElement(result_element);
+        }
+        function update5(text) {
+            let result_element1 = document.querySelectorAll(".operator")[16];
+            let result_element2 = document.querySelectorAll(".operator")[19];
+            result_element1.innerText = text;
+            result_element2.innerText = text;
+            Prism.highlightElement(result_element1);
+            Prism.highlightElement(result_element2);
+        }
+        function update6(text) {
+            let result_element1 = document.querySelectorAll(".operator")[17];
+            let result_element2 = document.querySelectorAll(".operator")[22];
+            result_element1.innerText = text;
+            result_element2.innerText = text;
+            Prism.highlightElement(result_element1);
+            Prism.highlightElement(result_element2);
+        }
+        function update7(text) {
+            let result_element = document.querySelectorAll(".function")[9];
+            result_element.innerText = text;
+            Prism.highlightElement(result_element);
+        }
+        function update8(text) {
+            let result_element = document.querySelectorAll(".function")[10];
+            result_element.innerText = text;
+            Prism.highlightElement(result_element);
+        }
+        function update9(text) {
+            let result_element1 = document.querySelectorAll(".operator")[24];
+            let result_element2 = document.querySelectorAll(".operator")[25];
+            result_element1.innerText = text;
+            result_element2.innerText = text;
+            Prism.highlightElement(result_element1);
+            Prism.highlightElement(result_element2);
+        }
+        function update10(text) {
+            let result_element = document.querySelectorAll(".operator")[27];
+            result_element.innerText = text;
+            Prism.highlightElement(result_element);
+        }
+        
+        function submitAnswer1() {
+            var resposta = document.querySelector('input[name="alternativa"]:checked');
+            var aviso = document.querySelectorAll("#aviso")[0];
+            aviso.hidden = false;
+
+            if(resposta == null) {
+                aviso.innerHTML = "<strong>Você ainda não marcou uma alternativa!</strong>"
+                aviso.style.backgroundColor = "#ebbc22";
+            }
+
+            if(resposta.value == "1") {
+                aviso.innerHTML = "<strong>Resposta Correta</strong>!";
+                aviso.style.backgroundColor = "#1cc771";
+            }
+            else {
+                aviso.innerHTML = "<strong>Não foi dessa vez, tente novamente</strong>!"
+                aviso.style.backgroundColor = "#db2828";
+            }
+        }
+
+        function submitAnswer2() {
+            var resposta = document.querySelector("#resposta2");
+            var aviso = document.querySelectorAll("#aviso")[1];
+            aviso.hidden = false;
+
+            if(resposta.value.toLowerCase() == "comentário" || resposta.value.toLowerCase() == "comentários") {
+                aviso.innerHTML = "<strong>Resposta Correta</strong>!";
+                aviso.style.backgroundColor = "#1cc771";
+            }
+            else {
+                aviso.innerHTML = "<strong>Não foi dessa vez, tente novamente</strong>!"
+                aviso.style.backgroundColor = "#db2828";
+            }
+        }
+
+        function submitAnswer3() {
+            var resposta1 = document.querySelectorAll("#resposta3")[0];
+            var resposta2 = document.querySelectorAll("#resposta3")[1];
+            var resposta3 = document.querySelectorAll("#resposta3")[2];
+            var resposta4 = document.querySelectorAll("#resposta3")[3];
+            var resposta5 = document.querySelectorAll("#resposta3")[4];
+            var resposta6 = document.querySelectorAll("#resposta3")[5];
+            var resposta7 = document.querySelectorAll("#resposta3")[6];
+            var resposta8 = document.querySelectorAll("#resposta3")[7];
+            var resposta9 = document.querySelectorAll("#resposta3")[8];
+            var resposta10 = document.querySelectorAll("#resposta3")[9];
+            var aviso = document.querySelectorAll("#aviso")[2];
+            aviso.hidden = false;
+
+            if(resposta1.value == "nome" && resposta2.value == "numeroTelefone" &&
+            resposta3.value == "idade" && resposta4.value == "mostraNomeIdade" &&
+            resposta5.value == "nome" && resposta6.value == "idade" &&
+            resposta7.value == "getNumeroTelefone" && resposta8.value == "verificaMaiorIdade" &&
+            resposta9.value == "idade" && resposta10.value == "MAIOR_IDADE") {
+                aviso.innerHTML = "<strong>Resposta Correta</strong>!";
+                aviso.style.backgroundColor = "#1cc771";
+            }
+            else {
+                aviso.innerHTML = "<strong>Não foi dessa vez, tente novamente</strong>!"
+                aviso.style.backgroundColor = "#db2828";
+            }
+        }
+    </script>
+</body>
+<footer>
+    Direitos reservados a Samuel Almeida Barros de Melo &#169; e Wyllian de Asevedo Mendes &#169;
+</footer>
+</html>
